@@ -26,28 +26,21 @@
                                     <constraint firstAttribute="width" constant="414" id="yGQ-BX-tdU"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sh9-Np-bU0">
-                                <rect key="frame" x="20" y="540" width="374" height="79"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uak-lc-0ss">
+                                <rect key="frame" x="20" y="551" width="374" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Başla">
-                                            <attributes>
-                                                <font key="NSFont" size="29" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <buttonConfiguration key="configuration" style="plain" title="Başla" buttonSize="mini">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="9AS-gP-4Xc" kind="presentation" modalPresentationStyle="fullScreen" id="srn-lq-0vE"/>
+                                    <segue destination="9AS-gP-4Xc" kind="presentation" modalPresentationStyle="fullScreen" id="Ver-rB-Dv6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Puan :  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOE-Sa-wvS">
-                                <rect key="frame" x="20" y="648" width="374" height="84"/>
+                                <rect key="frame" x="20" y="646" width="374" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.20392158630000001" green="0.47450977560000002" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -65,7 +58,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnBasla" destination="Sh9-Np-bU0" id="Gb4-Af-yJ9"/>
+                        <outlet property="button" destination="Uak-lc-0ss" id="zVb-Ue-f6u"/>
                         <outlet property="scoreLabel" destination="eOE-Sa-wvS" id="NFM-03-zpB"/>
                     </connections>
                 </viewController>
@@ -159,6 +152,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Soru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1v-NB-DIi">
+                                <rect key="frame" x="20" y="108" width="374" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CTA-ID-2EO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -167,6 +167,7 @@
                         <outlet property="BtnA" destination="Es6-ah-C1n" id="1dd-Ty-AeI"/>
                         <outlet property="BtnB" destination="XuQ-dR-G53" id="0h0-lZ-8Yr"/>
                         <outlet property="BtnC" destination="M9g-tn-Jaw" id="yej-cs-WTt"/>
+                        <outlet property="questionNumber" destination="h1v-NB-DIi" id="11A-wW-g5h"/>
                         <outlet property="soru" destination="xYl-9P-2Ae" id="WTK-kQ-oDu"/>
                         <outlet property="time" destination="nRW-98-DVV" id="IkM-wZ-X6o"/>
                     </connections>

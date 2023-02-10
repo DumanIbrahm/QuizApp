@@ -13,7 +13,11 @@ class MainViewController: UIViewController {
                      "“Sinekli Bakkal” Romanının Yazarı Aşağıdakilerden Hangisidir?",
                      "Aşağıda Verilen İlk Çağ Uygarlıklarından Hangisi Yazıyı İcat Etmiştir?",
                      "Bir Gün Kaç Saniyedir?",
-                     "Cevdet Bey ve Oğulları Eseri Kime Aittir?",]
+                     "Cevdet Bey ve Oğulları Eseri Kime Aittir?",
+                     "Bir Sebepten Dolayı Tek Kulağına Küpe Takan Osmanlı Padişahı Kimdir?",
+                     "Aşağıdaki Ülkelerden Hangisinin Nüfusu Daha Fazladır?",
+                     "Aspirinin Hammaddesi Nedir?",
+                     "“Labirentin Gölgesinde” ve “Sembollerin Gölgesinde” adlı fantastik romanların yazarı kimdir?"]
     
     
     let answers = [["Gaziantep","Bursa","İstanbul"],
@@ -22,8 +26,12 @@ class MainViewController: UIViewController {
                    ["Sümerler","Urartular","Elamlar"],
                    ["86400","84800","88600"],
                    ["Orhan Pamuk","Yahya Kemal Bayatlı","Atilla İlhan"],
+                   ["Yavuz Sultan Selim","Orhan Bey","Fatih Sultan Selim"],
+                   ["Almanya","Fransa","İngiltere"],
+                   ["Söğüt","Köknar","Kavak"],
+                   ["Yahya Karakurt","Mehmet Rauf","Yaşar Kemal"]
     ]
-
+    
     var currentQuestion = 0
     var score = 0
     var rightAnswer:UInt32 = 0
@@ -31,6 +39,7 @@ class MainViewController: UIViewController {
     var defaults = UserDefaults.standard
     var timer = Timer()
     
+    @IBOutlet weak var questionNumber: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var soru: UILabel!
     @IBOutlet weak var BtnA: UIButton!
@@ -48,7 +57,7 @@ class MainViewController: UIViewController {
     }
     func timeCount(){
         for _ in questions{
-            timeText += 3
+            timeText += 2
         }
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -68,7 +77,7 @@ class MainViewController: UIViewController {
             
             alert.addAction(replayButton)
             self.present(alert, animated: true)
-
+            
         }
     }
     
@@ -85,9 +94,10 @@ class MainViewController: UIViewController {
                 button.setTitle(answers[currentQuestion][x], for: .normal)
                 x = 2
             }
-           
+            
         }
         currentQuestion += 1
+        questionNumber.text = "Soru \(currentQuestion)"
     }
     
     @IBAction func clickButton(_ sender: UIButton) {
@@ -107,5 +117,5 @@ class MainViewController: UIViewController {
         }
     }
     
-
+    
 }
