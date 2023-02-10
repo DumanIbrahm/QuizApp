@@ -38,6 +38,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var BtnC: UIButton!
     @IBOutlet weak var BtnB: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         timeCount()
