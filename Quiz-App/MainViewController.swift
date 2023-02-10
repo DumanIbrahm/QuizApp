@@ -23,7 +23,6 @@ class MainViewController: UIViewController {
                    ["86400","84800","88600"],
                    ["Orhan Pamuk","Yahya Kemal Bayatlı","Atilla İlhan"],
     ]
-    
 
     var currentQuestion = 0
     var score = 0
